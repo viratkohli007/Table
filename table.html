@@ -1,0 +1,61 @@
+<!Doctype html>
+<html>
+<head>
+
+  <title>Table</title>
+</head>
+
+<body>
+
+
+  column: &nbsp;&nbsp;<input type="number" name="column" id="col"><br><br>
+  row:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="row" id="row" ><br><br>
+
+  <button onclick = "createTable(col, row)">Create</button>
+
+  <p id="abc">
+  
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <p id="f"></p>
+  
+  
+
+   <script type="text/javascript">
+       function createTable(col, row) {
+         
+         var count = 1;
+         var col = document.getElementById("col").value;
+          var row = document.getElementById("row").value;
+
+
+          document.getElementById("abc").innerHTML = "<table border='solid'>";
+          // document.write("<table border='solid'>");
+          for(var i = 0; i<row; i++ ){
+
+            document.getElementById("a").innerHTML = "<tr> ";
+                  //  document.write("<tr>");
+                   for(var j= 0; j<col; j++){
+                  // document.write("<td>"+(count)+"</td>");
+                  document.getElementById("b").innerHTML = "<td>";
+                  document.getElementById("c").innerHTML = count;
+                  document.getElementById("d").innerHTML = "</td>";
+                      count++;
+                   }
+                    document.getElementById("e").innerHTML= "</tr>"
+          }
+          
+          document.getElementById("f").innerHTML = "</table>";
+       }
+          
+</script>
+
+         
+</body>
+
+
+
+</html>

@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+<head>
+
+  <title>Table</title>
+</head>
+
+<body>
+
+
+  column: &nbsp;&nbsp;<input type="number" name="column" id="col"><br><br>
+  row:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="row" id="row" ><br><br>
+
+  <button onclick = "createTable(col, row)">Create</button>
+
+ <p id = "table"></p>
+  
+  
+
+   <script type="text/javascript">
+       function createTable(col, row) {
+         
+         var count = 1;
+         var col = document.getElementById("col").value;
+          var row = document.getElementById("row").value;
+          var text="";
+
+          
+           text +="<table border='solid'>";
+          for(var i = 0; i<row; i++ ){
+
+           
+                   text += "<tr>";
+                   for(var j= 0; j<col; j++){
+                   text += "<td>"+count+"</td>";
+                  
+                      count++;
+                   }
+                    text += "</tr>";
+          }
+          
+          text += "</table>";
+          document.getElementById("table").innerHTML = text;
+       }
+          
+</script>
+
+         
+</body>
+
+
+
+</html>
